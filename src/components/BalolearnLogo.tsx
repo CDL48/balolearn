@@ -7,17 +7,16 @@ export default function BalolearnLogo({
     className?: string;
     namePosition?: null | "bottom" | "right";
 }) {
-    console.log(namePosition);
     return (
         <div
             className={twMerge([
-                "grid w-full place-content-center text-inherit",
+                "grid h-full w-full place-content-center text-inherit",
                 className,
             ])}
         >
             {namePosition === null ? (
                 <svg
-                    className="w-full"
+                    className="h-full w-full"
                     width="198"
                     height="116"
                     viewBox="0 0 198 116"
@@ -43,7 +42,7 @@ export default function BalolearnLogo({
                 </svg>
             ) : namePosition === "bottom" ? (
                 <svg
-                    className="w-full"
+                    className="h-full w-full"
                     width="272"
                     height="192"
                     viewBox="0 0 272 192"
@@ -105,7 +104,7 @@ export default function BalolearnLogo({
                 </svg>
             ) : namePosition === "right" ? (
                 <svg
-                    className="w-full"
+                    className="h-full w-full"
                     width="678"
                     height="116"
                     viewBox="0 0 678 116"
