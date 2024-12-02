@@ -6,7 +6,7 @@ import ProfilePopover from "./ProfilePopover";
 
 export default function Nav() {
     return (
-        <nav className="fixed left-0 top-0 flex w-full items-center justify-between gap-2 border-b bg-background px-8 py-4 md:px-16 lg:px-32">
+        <nav className="sticky left-0 top-0 z-50 flex h-16 w-full items-center justify-between gap-2 border-b bg-[image:url('/BG-Gradient-Light.png')] bg-cover bg-fixed bg-top px-8 py-4 dark:bg-[image:url('/BG-Gradient.png')] md:px-16 lg:px-32">
             <div className="flex items-center gap-2">
                 <BalolearnLogo className="w-40" namePosition="right" />
             </div>
