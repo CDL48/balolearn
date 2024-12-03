@@ -14,7 +14,7 @@ export default function Nav() {
             </div>
             <div className="hidden md:block">
                 <Button variant="link" className="text-xl text-foreground">
-                    <Link href="/Home">Home</Link>
+                    <Link href="/">Home</Link>
                 </Button>
                 <Button variant="link" className="text-xl text-foreground">
                     <Link href="/courses">Courses</Link>

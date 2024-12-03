@@ -47,7 +47,7 @@ export default function ProfilePopover() {
                         className="justify-start text-base [&_svg]:size-6"
                         asChild
                     >
-                        <Link href="">
+                        <Link href="/profile">
                             <UserRoundPen className="mr-3" />
                             Profile
                         </Link>
