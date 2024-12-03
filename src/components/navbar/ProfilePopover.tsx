@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogOut, UserRoundPen } from "lucide-react";
+import { GraduationCap, Home, LogOut, UserRoundPen } from "lucide-react";
 import {
     Popover,
     PopoverContent,
@@ -54,6 +54,28 @@ export default function ProfilePopover() {
                     </Button>
 
                     <ModeToggle />
+
+                    <Button
+                        variant="ghost"
+                        className="justify-start text-base md:hidden [&_svg]:size-6"
+                        asChild
+                    >
+                        <Link href="/home">
+                            <Home className="mr-3" />
+                            Home
+                        </Link>
+                    </Button>
+
+                    <Button
+                        variant="ghost"
+                        className="justify-start text-base md:hidden [&_svg]:size-6"
+                        asChild
+                    >
+                        <Link href="/courses">
+                            <GraduationCap className="mr-3" />
+                            Courses
+                        </Link>
+                    </Button>
                 </div>
 
                 <Separator />
