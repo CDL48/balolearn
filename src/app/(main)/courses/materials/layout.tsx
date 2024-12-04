@@ -4,7 +4,7 @@ export default function MainLayout({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <div className="relative mx-auto flex w-fit gap-10">
+        <div className="relative mx-auto flex w-fit gap-10 py-12">
             <Sidebar />
             <section>{children}</section>
         </div>
