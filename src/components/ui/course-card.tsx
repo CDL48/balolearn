@@ -29,7 +29,7 @@ const CourseCard = ({
     console.log(slug);
     return (
         <a
-            href={`/courses/${slug}`}
+            href={`/courses/materials/1`}
             className={cn(
                 "grid cursor-pointer gap-2 rounded-lg border bg-card/30 p-4 text-card-foreground shadow-sm transition-[background-color_ease-in_250ms,_transform_ease-in_250ms] hover:scale-[1.025] hover:bg-accent",
                 className,

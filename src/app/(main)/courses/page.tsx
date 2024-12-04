@@ -8,7 +8,7 @@ export default function CoursesPage() {
         .flat()
         .filter((t, i, self) => !self.slice(0, i).includes(t));
     return (
-        <div className="mx-8 my-4 md:mx-16 lg:mx-32">
+        <div>
             <h2 className="my-8 text-center text-4xl font-bold">Courses</h2>
             <Tabs defaultValue="All" className="w-full">
                 <TabsList className="mb-4 w-full justify-normal overflow-x-auto">

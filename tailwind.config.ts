@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
+import animate from "tailwindcss-animate";
 
 const config: Config = {
     darkMode: ["class"],
@@ -56,8 +58,20 @@ const config: Config = {
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        color: "hsl(var(--foreground))",
+                        maxWidth: "100ch",
+                        "--tw-prose-headings": "hsl(var(--foreground))",
+                        "--tw-prose-body": "hsl(var(--foreground))",
+                        "--tw-prose-bold": "hsl(var(--foreground))",
+                        "--tw-prose-captions": "hsl(var(--muted-foreground))",
+                    },
+                },
+            },
         },
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [animate, typography],
 };
 export default config;
