@@ -7,7 +7,9 @@ export default function MainLayout({
     return (
         <div className="flex min-h-screen flex-col">
             <Nav />
-            <main className="flex-grow px-8 md:px-16 lg:px-32">{children}</main>
+            <main className="min-h-[calc(100vh-10rem)] px-8 md:px-16 lg:px-32">
+                {children}
+            </main>
             <Footer />
         </div>
     );
