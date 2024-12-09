@@ -102,14 +102,32 @@ export default function Scroller({
         <div className="mx-auto max-w-7xl overflow-hidden [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]">
             <ul
                 className={cn(
-                    "flex w-max animate-[scroll_80s_forwards_linear_infinite] gap-4 py-4 *:rounded-xl *:bg-background *:px-6 *:py-4 *:shadow-xl",
+                    "flex w-max animate-[scroll_80s_forwards_linear_infinite] gap-4 py-4",
                     direction === "normal"
                         ? "direction-normal"
                         : "direction-reverse",
                 )}
             >
                 {items.map((item) => (
-                    <li key={item.reviewer}>
+                    <li
+                        key={item.reviewer}
+                        className="rounded-xl bg-background px-6 py-4 shadow-xl"
+                    >
+                        <div className="grid max-w-52 gap-2">
+                            <h3 className="text-xl font-bold">
+                                {item.reviewer}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {item.comment}
+                            </p>
+                        </div>
+                    </li>
+                ))}
+                {items.map((item) => (
+                    <li
+                        key={item.reviewer}
+                        className="rounded-xl bg-background px-6 py-4 shadow-xl"
+                    >
                         <div className="grid max-w-52 gap-2">
                             <h3 className="text-xl font-bold">
                                 {item.reviewer}
