@@ -12,6 +12,7 @@ import {
     NotebookPen,
 } from "lucide-react";
 import { ForwardRefExoticComponent, RefAttributes, useRef } from "react";
+import Link from "next/link";
 
 function Feature({
     icon: Icon,
@@ -56,8 +57,8 @@ export default function Page() {
                         Free/Libre and Open Source Course Platform.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-                        <Button className="w-36 py-6 text-xl">
-                            Get Started
+                        <Button className="w-36 py-6 text-xl" asChild>
+                            <Link href={"/courses"}>Get Started</Link>
                         </Button>
                         <Button
                             variant="outline"
@@ -78,9 +79,9 @@ export default function Page() {
 
             <section className="mx-auto my-24">
                 <h2 className="mb-12 text-center font-serif text-5xl font-bold">
-                    Top Taufiqs
+                    Top Comments
                 </h2>
-                <Scroller direction="forwards" />
+                <Scroller direction="normal" />
                 <Scroller direction="reverse" />
             </section>
 

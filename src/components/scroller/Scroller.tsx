@@ -1,7 +1,7 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import "./scrollerStyle.css";
-import { useEffect, useRef } from "react";
 
 export const items = [
     {
@@ -96,34 +96,17 @@ export const items = [
 export default function Scroller({
     direction,
 }: {
-    direction: "forwards" | "reverse";
+    direction: "normal" | "reverse";
 }) {
-    const scroller = useRef<HTMLDivElement>(null);
-    const innerScroller = useRef<HTMLUListElement>(null);
-
-    useEffect(() => {
-        if (scroller.current) {
-            console.log(direction);
-            scroller.current.setAttribute("data-direction", direction);
-        }
-
-        if (innerScroller.current) {
-            const scrollerContent = Array.from(innerScroller.current.children);
-
-            scrollerContent.forEach((item) => {
-                if (innerScroller.current) {
-                    const duplicatedItem = item.cloneNode(true);
-                    innerScroller.current.appendChild(duplicatedItem);
-                }
-            });
-        }
-    }, [direction]);
-
     return (
-        <div ref={scroller} className="scroller">
+        <div className="mx-auto max-w-7xl overflow-hidden [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]">
             <ul
-                ref={innerScroller}
-                className="inner-scroller *:rounded-xl *:bg-background *:px-6 *:py-4 *:shadow-xl"
+                className={cn(
+                    "flex w-max animate-[scroll_80s_forwards_linear_infinite] gap-4 py-4 *:rounded-xl *:bg-background *:px-6 *:py-4 *:shadow-xl",
+                    direction === "normal"
+                        ? "direction-normal"
+                        : "direction-reverse",
+                )}
             >
                 {items.map((item) => (
                     <li key={item.reviewer}>
