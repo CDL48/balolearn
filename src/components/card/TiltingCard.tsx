@@ -41,13 +41,20 @@ export default function TiltingCard() {
                 tabIndex={0}
                 className="pre relative rounded-2xl bg-background p-8 text-xl font-bold before:absolute before:inset-3 before:z-[-1] before:rounded-2xl before:bg-black before:opacity-50 before:blur-[15px] before:content-[''] after:absolute after:inset-[-1rem] after:z-[-2] after:rounded-2xl after:bg-primary after:content-[''] lg:text-2xl"
             >
-                <code className="text-gray-300">
-                    <span className="text-red-300">fn</span>
-                    <span className="text-blue-300">{" main"}</span>
+                <code className="text-gray-500 dark:text-gray-300">
+                    <span className="text-red-700 dark:text-red-300">fn</span>
+                    <span className="text-blue-700 dark:text-blue-300">
+                        {" main"}
+                    </span>
                     <span>{"() {\n"}</span>
                     <span>{"   "}</span>
-                    <span className="text-purple-300">println!</span>(
-                    <span className="text-green-200">{'"Hello, World!"'}</span>
+                    <span className="text-purple-700 dark:text-purple-300">
+                        println!
+                    </span>
+                    (
+                    <span className="text-green-600 dark:text-green-200">
+                        {'"Hello, World!"'}
+                    </span>
                     );
                     <span>{"\n}"}</span>
                 </code>
@@ -55,3 +62,4 @@ export default function TiltingCard() {
         </div>
     );
 }
+// bg-[hsl(240_21%_15%)]
