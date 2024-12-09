@@ -39,18 +39,17 @@ export default function TiltingCard() {
             <pre
                 ref={preRef}
                 tabIndex={0}
-                className="language-css pre relative rounded-2xl bg-background p-8 text-xl font-bold lg:text-2xl"
+                className="pre relative rounded-2xl bg-background p-8 text-xl font-bold before:absolute before:inset-3 before:z-[-1] before:rounded-2xl before:bg-black before:opacity-50 before:blur-[15px] before:content-[''] after:absolute after:inset-[-1rem] after:z-[-2] after:rounded-2xl after:bg-primary after:content-[''] lg:text-2xl"
             >
-                <code className="language-css">
-                    <span className="token selector">.exquisite</span>
-                    <span className="token punctuation">{" {\n"}</span>
-                    <span className="token property">{"    "}display</span>
-                    <span className="token punctuation">:</span> grid
-                    <span className="token punctuation">;{"\n"}</span>
-                    <span className="token property">{"    "}gap</span>
-                    <span className="token punctuation">:</span> 2rem
-                    <span className="token punctuation">;{"\n"}</span>
-                    <span className="token punctuation">{"}"}</span>
+                <code className="text-gray-300">
+                    <span className="text-red-300">fn</span>
+                    <span className="text-blue-300">{" main"}</span>
+                    <span>{"() {\n"}</span>
+                    <span>{"   "}</span>
+                    <span className="text-purple-300">println!</span>(
+                    <span className="text-green-200">{'"Hello, World!"'}</span>
+                    );
+                    <span>{"\n}"}</span>
                 </code>
             </pre>
         </div>
