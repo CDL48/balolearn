@@ -8,8 +8,8 @@ export default function CoursesPage() {
         .flat()
         .filter((t, i, self) => !self.slice(0, i).includes(t));
     return (
-        <div>
-            <h2 className="my-8 text-center text-4xl font-bold">Courses</h2>
+        <div className="py-12">
+            <h2 className="mb-8 text-center text-4xl font-bold">Courses</h2>
             <Tabs defaultValue="All" className="w-full">
                 <TabsList className="mb-4 w-full justify-normal overflow-x-auto">
                     <TabsTrigger key="All" value="All">
